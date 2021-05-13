@@ -1,0 +1,55 @@
+[
+  {
+    "id": "a75056e8-0622-4887-bd82-de75096d8326",
+    "prefijo": "Ing.",
+    "nombre": "Fabricio",
+    "apellidos": "Pereyra",
+    "sufijo": "II",
+    "apodo": "Coco",
+    "empresa": "Quilmes",
+    "puestoDeTrabajo": "CSO",
+    "departamento": "Recursos humanos",
+    "pais": {
+      "preffix": "52",
+      "iso3": "MEX",
+      "name": "Mexico"
+    },
+    "codigoPostal": "63122",
+    "ciudad": "Bariloche",
+    "provincia": "Neuquen",
+    "fechaDeNacimiento": "11/07/1980",
+    "tags": [
+      {
+        "name": "Amigos"
+      }
+    ],
+    "correos": [
+      {
+        "email": "shila_hume@yahoo.com",
+        "tag": "Hogar"
+      }
+    ],
+    "phones": [
+      {
+        "country": {
+          "preffix": "52",
+          "iso3": "MEX",
+          "name": "Mexico"
+        },
+        "tag": "Familia",
+        "phoneNumber": "603.595.1426",
+        "fullNumber": "+52603.595.1426"
+      },
+      {
+        "country": {
+          "preffix": "52",
+          "iso3": "MEX",
+          "name": "Mexico"
+        },
+        "tag": "Club de futbol",
+        "phoneNumber": "603.595.1426",
+        "fullNumber": "+52603.595.1426"
+      }
+    ]
+  }
+]
