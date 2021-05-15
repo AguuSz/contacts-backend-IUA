@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import main.java.models.Email;
 import main.java.utils.MyUtils;
+import utilities.IContactService;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -110,7 +111,7 @@ public class ContactService implements IContactService {
 
         try {
             for (int i = 0; i < contacts.length; i++) {
-                if (contacts[i].getNombre().toLowerCase().contains(name.toLowerCase())) {
+                if (contacts[i].getName().toLowerCase().contains(name.toLowerCase())) {
                     // Significa que este contacto tiene parte del nombre ingresado
                     contactsWithThatNameList.add(contacts[i]);
                 }
@@ -338,11 +339,11 @@ public class ContactService implements IContactService {
     // Realiza una validacion de campos basica
     public static boolean validateFields(Contact contact) {
         try {
-            if (contact.getNombre().trim().length()            == 0) return false;
-            if (contact.getApellidos().trim().length()         == 0) return false;
-            if (contact.getApodo().trim().length()             == 0) return false;
-            if (contact.getCiudad().trim().length()            == 0) return false;
-            if (contact.getProvincia().trim().length()         == 0) return false;
+            if (contact.getName().trim().length()            == 0) return false;
+            if (contact.getSurname().trim().length()         == 0) return false;
+            if (contact.getNickname().trim().length()             == 0) return false;
+            if (contact.getCity().trim().length()            == 0) return false;
+            if (contact.getProvince().trim().length()         == 0) return false;
 
             for (Email email : contact.getCorreos()) {
                 if (email.getMail().trim().length() == 0) return false;
