@@ -254,20 +254,20 @@ public class RandomContacts extends Contact {
             Contact contact = new Contact();
             Random random = new Random();
 
-            contact.setPrefijo(this.prefijos[random.nextInt(this.prefijos.length)]);
-            contact.setNombre(this.nombres[random.nextInt(this.nombres.length)]);
-            contact.setApellidos(this.apellidos[random.nextInt(this.apellidos.length)]);
-            contact.setSufijo(this.sufijos[random.nextInt(this.sufijos.length)]);
-            contact.setApodo(this.apodos[random.nextInt(this.apodos.length)]);
-            contact.setEmpresa(this.empresas[random.nextInt(this.empresas.length)]);
-            contact.setPuestoDeTrabajo(this.puestosDeTrabajo[random.nextInt(this.puestosDeTrabajo.length)]);
-            contact.setDepartamento(this.departamentos[random.nextInt(this.departamentos.length)]);
+            contact.setPrefix(this.prefijos[random.nextInt(this.prefijos.length)]);
+            contact.setName(this.nombres[random.nextInt(this.nombres.length)]);
+            contact.setSurname(this.apellidos[random.nextInt(this.apellidos.length)]);
+            contact.setSufix(this.sufijos[random.nextInt(this.sufijos.length)]);
+            contact.setNickname(this.apodos[random.nextInt(this.apodos.length)]);
+            contact.setBusiness(this.empresas[random.nextInt(this.empresas.length)]);
+            contact.setJob(this.puestosDeTrabajo[random.nextInt(this.puestosDeTrabajo.length)]);
+            contact.setDepartment(this.departamentos[random.nextInt(this.departamentos.length)]);
             Country country = new Country(this.paises[random.nextInt(this.paises.length)]);
-            contact.setPais(country);
-            contact.setCiudad(this.ciudades[random.nextInt(this.ciudades.length)]);
-            contact.setCodigoPostal(this.codigosPostales[random.nextInt(this.codigosPostales.length)]);
-            contact.setProvincia(this.provincias[random.nextInt(this.provincias.length)]);
-            contact.setFechaDeNacimiento(this.fechasDeNacimiento[random.nextInt(this.fechasDeNacimiento.length)]);
+            contact.setCountry(country);
+            contact.setCity(this.ciudades[random.nextInt(this.ciudades.length)]);
+            contact.setPostalCode(this.codigosPostales[random.nextInt(this.codigosPostales.length)]);
+            contact.setProvince(this.provincias[random.nextInt(this.provincias.length)]);
+            contact.setDateOfBirth(this.fechasDeNacimiento[random.nextInt(this.fechasDeNacimiento.length)]);
 
             for (int j = 0; j < random.nextInt(3); j++) {
                 contact.addPhone(new Phone(country, telefonos[random.nextInt(this.telefonos.length)], tags[random.nextInt(this.tags.length)]));

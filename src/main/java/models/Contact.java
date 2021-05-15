@@ -7,21 +7,21 @@ import java.util.UUID;
 
 public class Contact {
     private String id;
-    private String prefijo;
-    private String nombre;
-    private String apellidos;
-    private String sufijo;
-    private String apodo;
-    private String archivarComo;
-    private String empresa;
-    private String puestoDeTrabajo;
-    private String departamento;
-    private Country pais;
-    private String lineaDeDireccion2;
-    private String codigoPostal;
-    private String ciudad;
-    private String provincia;
-    private String fechaDeNacimiento;
+    private String prefix;
+    private String name;
+    private String surname;
+    private String sufix;
+    private String nickname;
+    private String saveAs;
+    private String business;
+    private String job;
+    private String department;
+    private Country country;
+    private String homeAdress2;
+    private String postalCode;
+    private String city;
+    private String province;
+    private String dateOfBirth;
 
     // Atributos lista
     private List<Tag> tags = new ArrayList<Tag>();
@@ -31,21 +31,21 @@ public class Contact {
 
     public Contact() {
         this.id                                     = UUID.randomUUID().toString();
-        this.prefijo                                = null;
-        this.nombre                                 = null;
-        this.apellidos                              = null;
-        this.sufijo                                 = null;
-        this.apodo                                  = null;
-        this.archivarComo                           = null;
-        this.empresa                                = null;
-        this.puestoDeTrabajo                        = null;
-        this.departamento                           = null;
-        this.pais                                   = null;
-        this.codigoPostal                           = null;
-        this.lineaDeDireccion2                      = null;
-        this.ciudad                                 = null;
-        this.provincia                              = null;
-        this.fechaDeNacimiento                      = null;
+        this.prefix = null;
+        this.name = null;
+        this.surname = null;
+        this.sufix = null;
+        this.nickname = null;
+        this.saveAs = null;
+        this.business = null;
+        this.job = null;
+        this.department = null;
+        this.country = null;
+        this.postalCode = null;
+        this.homeAdress2 = null;
+        this.city = null;
+        this.province = null;
+        this.dateOfBirth = null;
     }
 
     // -------------------------------------------- Getters y setters --------------------------------------------
@@ -58,124 +58,124 @@ public class Contact {
         this.id = id;
     }
 
-    public String getPrefijo() {
-        return prefijo;
+    public String getPrefix() {
+        return prefix;
     }
 
-    public void setPrefijo(String prefijo) {
-        this.prefijo = prefijo;
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public String getSufijo() {
-        return sufijo;
+    public String getSufix() {
+        return sufix;
     }
 
-    public void setSufijo(String sufijo) {
-        this.sufijo = sufijo;
+    public void setSufix(String sufix) {
+        this.sufix = sufix;
     }
 
-    public String getApodo() {
-        return apodo;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setApodo(String apodo) {
-        this.apodo = apodo;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public String getArchivarComo() {
-        return archivarComo;
+    public String getSaveAs() {
+        return saveAs;
     }
 
-    public void setArchivarComo(String archivarComo) {
-        this.archivarComo = archivarComo;
+    public void setSaveAs(String saveAs) {
+        this.saveAs = saveAs;
     }
 
-    public String getEmpresa() {
-        return empresa;
+    public String getBusiness() {
+        return business;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setBusiness(String business) {
+        this.business = business;
     }
 
-    public String getPuestoDeTrabajo() {
-        return puestoDeTrabajo;
+    public String getJob() {
+        return job;
     }
 
-    public void setPuestoDeTrabajo(String puestoDeTrabajo) {
-        this.puestoDeTrabajo = puestoDeTrabajo;
+    public void setJob(String job) {
+        this.job = job;
     }
 
-    public String getDepartamento() {
-        return departamento;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
-    public Country getPais() {
-        return pais;
+    public Country getCountry() {
+        return country;
     }
 
-    public void setPais(Country pais) {
-        this.pais = pais;
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
-    public String getLineaDeDireccion2() {
-        return lineaDeDireccion2;
+    public String getHomeAdress2() {
+        return homeAdress2;
     }
 
-    public void setLineaDeDireccion2(String lineaDeDireccion2) {
-        this.lineaDeDireccion2 = lineaDeDireccion2;
+    public void setHomeAdress2(String homeAdress2) {
+        this.homeAdress2 = homeAdress2;
     }
 
-    public String getCodigoPostal() {
-        return codigoPostal;
+    public String getPostalCode() {
+        return postalCode;
     }
 
-    public void setCodigoPostal(String codigoPostal) {
-        this.codigoPostal = codigoPostal;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public String getCity() {
+        return city;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getProvincia() {
-        return provincia;
+    public String getProvince() {
+        return province;
     }
 
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+    public void setProvince(String province) {
+        this.province = province;
     }
 
-    public String getFechaDeNacimiento() {
-        return fechaDeNacimiento;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setFechaDeNacimiento(String fechaDeNacimiento) {
-        this.fechaDeNacimiento = fechaDeNacimiento;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     // -------------------------------------------- Comienzo atributos lista --------------------------------------------
@@ -249,9 +249,9 @@ public class Contact {
     // -------------------------------------------- Utilidades contacto --------------------------------------------
     public String getBriefContact() {
         return  "\tid: " + id + "\n" +
-                "\tnombre: " + nombre + "\n" +
-                "\tapellidos: " + apellidos + "\n" +
-                "\tpais: " + pais.briefToString() + "\n" +
+                "\tnombre: " + name + "\n" +
+                "\tapellidos: " + surname + "\n" +
+                "\tpais: " + country.briefToString() + "\n" +
                 "\ttelefonos registrados: " + phones.size() + "\n" +
                 "\tcorreos registrados: " + correos.size() + "\n" +
                 "\ttags registrados: " + tags + "\n";
@@ -262,31 +262,31 @@ public class Contact {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Contact contact = (Contact) o;
-        return Objects.equals(id, contact.id) && Objects.equals(prefijo, contact.prefijo) && Objects.equals(nombre, contact.nombre) && Objects.equals(apellidos, contact.apellidos) && Objects.equals(sufijo, contact.sufijo) && Objects.equals(apodo, contact.apodo) && Objects.equals(archivarComo, contact.archivarComo) && Objects.equals(empresa, contact.empresa) && Objects.equals(puestoDeTrabajo, contact.puestoDeTrabajo) && Objects.equals(departamento, contact.departamento) && Objects.equals(pais, contact.pais) && Objects.equals(lineaDeDireccion2, contact.lineaDeDireccion2) && Objects.equals(codigoPostal, contact.codigoPostal) && Objects.equals(ciudad, contact.ciudad) && Objects.equals(provincia, contact.provincia) && Objects.equals(fechaDeNacimiento, contact.fechaDeNacimiento) && Objects.equals(tags, contact.tags) && Objects.equals(correos, contact.correos) && Objects.equals(phones, contact.phones);
+        return Objects.equals(id, contact.id) && Objects.equals(prefix, contact.prefix) && Objects.equals(name, contact.name) && Objects.equals(surname, contact.surname) && Objects.equals(sufix, contact.sufix) && Objects.equals(nickname, contact.nickname) && Objects.equals(saveAs, contact.saveAs) && Objects.equals(business, contact.business) && Objects.equals(job, contact.job) && Objects.equals(department, contact.department) && Objects.equals(country, contact.country) && Objects.equals(homeAdress2, contact.homeAdress2) && Objects.equals(postalCode, contact.postalCode) && Objects.equals(city, contact.city) && Objects.equals(province, contact.province) && Objects.equals(dateOfBirth, contact.dateOfBirth) && Objects.equals(tags, contact.tags) && Objects.equals(correos, contact.correos) && Objects.equals(phones, contact.phones);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, prefijo, nombre, apellidos, sufijo, apodo, archivarComo, empresa, puestoDeTrabajo, departamento, pais, lineaDeDireccion2, codigoPostal, ciudad, provincia, fechaDeNacimiento, tags, correos, phones);
+        return Objects.hash(id, prefix, name, surname, sufix, nickname, saveAs, business, job, department, country, homeAdress2, postalCode, city, province, dateOfBirth, tags, correos, phones);
     }
 
     @Override
     public String toString() {
         return  "\tid: " + id + "\n" +
-                "\tprefijo: " + prefijo + "\n" +
-                "\tnombre: " + nombre + "\n" +
-                "\tapellidos: " + apellidos + "\n" +
-                "\tsufijo: " + sufijo + "\n" +
-                "\tapodo: " + apodo + "\n" +
-                "\tarchivarComo: " + archivarComo + "\n" +
-                "\tempresa: " + empresa + "\n" +
-                "\tpuestoDeTrabajo: " + puestoDeTrabajo + "\n" +
-                "\tdepartamento: " + departamento + "\n" +
-                "\tpais: " + pais + "\n" +
-                "\tciudad: " + ciudad + "\n" +
-                "\tprovincia: " + provincia + "\n" +
-                "\tlineaDeDireccion2: " + lineaDeDireccion2 + "\n" +
-                "\tcodigoPostal: " + codigoPostal + "\n" +
+                "\tprefijo: " + prefix + "\n" +
+                "\tnombre: " + name + "\n" +
+                "\tapellidos: " + surname + "\n" +
+                "\tsufijo: " + sufix + "\n" +
+                "\tapodo: " + nickname + "\n" +
+                "\tarchivarComo: " + saveAs + "\n" +
+                "\tempresa: " + business + "\n" +
+                "\tpuestoDeTrabajo: " + job + "\n" +
+                "\tdepartamento: " + department + "\n" +
+                "\tpais: " + country + "\n" +
+                "\tciudad: " + city + "\n" +
+                "\tprovincia: " + province + "\n" +
+                "\tlineaDeDireccion2: " + homeAdress2 + "\n" +
+                "\tcodigoPostal: " + postalCode + "\n" +
                 "\ttelefonos: " + phones + "\n" +
                 "\tcorreos: " + correos + "\n";
 

@@ -2,13 +2,12 @@ package utilities;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.List;
 
 import main.java.models.Contact;
 import main.java.models.Email;
 
 public interface IContactService {
-	
+
 	// -------------------------------------------- Seccion create --------------------------------------------
 
     // Guarda los contactos dados en un JSON
@@ -61,11 +60,11 @@ public interface IContactService {
     // Realiza una validacion de campos basica
     public static boolean validateFields(Contact contact) {
         try {
-            if (contact.getNombre().trim().length()            == 0) return false;
-            if (contact.getApellidos().trim().length()         == 0) return false;
-            if (contact.getApodo().trim().length()             == 0) return false;
-            if (contact.getCiudad().trim().length()            == 0) return false;
-            if (contact.getProvincia().trim().length()         == 0) return false;
+            if (contact.getName().trim().length()            == 0) return false;
+            if (contact.getSurname().trim().length()         == 0) return false;
+            if (contact.getNickname().trim().length()             == 0) return false;
+            if (contact.getCity().trim().length()            == 0) return false;
+            if (contact.getProvince().trim().length()         == 0) return false;
 
             for (Email email : contact.getCorreos()) {
                 if (email.getMail().trim().length() == 0) return false;
@@ -81,7 +80,7 @@ public interface IContactService {
     }
     
     // Valida si un url dada cumple los requisitos
-    private static boolean validateUrl(String url) {
+    public static boolean validateUrl(String url) {
         try {
             new URI(url).parseServerAuthority();
             return true;
