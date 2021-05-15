@@ -1,5 +1,6 @@
 package main.java.services;
 
+import main.java.interfaces.IContactService;
 import main.java.models.Contact;
 
 import com.google.gson.Gson;
@@ -250,21 +251,6 @@ public class ContactService implements IContactService {
         }
     }
 
-    public void printAListOfContacts(Contact[] contacts) {
-        try {
-            // Si la longitud del array es 0, entonces que me tire que no hay nada asi lo trabajo en el catch
-            if (contacts.length == 0) throw new NullPointerException();
-            for (int i = 0; i < contacts.length; i++) {
-                System.out.println("=========================================");
-                System.out.println("Contacto N: " + (i + 1));
-                System.out.println(contacts[i].getBriefContact());
-                System.out.println("=========================================");
-            }
-        } catch (NullPointerException e) {
-            System.out.println("No se han encontrado usuarios");
-        }
-    }
-
     // Imprime los contactos dados por parametro con mayor detalle
     public void printAllContactsDetailed() {
         Contact[] contactsToPrint = getContacts();
@@ -357,7 +343,7 @@ public class ContactService implements IContactService {
     }
 
     // Valida si un url dada cumple los requisitos
-    private static boolean validateUrl(String url) {
+    public boolean validateUrl(String url) {
         try {
             new URI(url).parseServerAuthority();
             return true;
