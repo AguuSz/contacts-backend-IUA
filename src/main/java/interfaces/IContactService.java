@@ -3,9 +3,6 @@ package main.java.interfaces;
 import main.java.models.Contact;
 import main.java.models.Email;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
 public interface IContactService {
 
     // -------------------------------------------- Seccion create --------------------------------------------
@@ -60,13 +57,13 @@ public interface IContactService {
     // Realiza una validacion de campos basica
     public static boolean validateFields(Contact contact) {
         try {
-            if (contact.getNombre().trim().length()            == 0) return false;
-            if (contact.getApellidos().trim().length()         == 0) return false;
-            if (contact.getApodo().trim().length()             == 0) return false;
-            if (contact.getCiudad().trim().length()            == 0) return false;
-            if (contact.getProvincia().trim().length()         == 0) return false;
+            if (contact.getName().trim().length()            == 0) return false;
+            if (contact.getSurname().trim().length()         == 0) return false;
+            if (contact.getNickname().trim().length()             == 0) return false;
+            if (contact.getCity().trim().length()            == 0) return false;
+            if (contact.getProvince().trim().length()         == 0) return false;
 
-            for (Email email : contact.getCorreos()) {
+            for (Email email : contact.getEmails()) {
                 if (email.getMail().trim().length() == 0) return false;
                 if (!email.getMail().contains("@") || !email.getMail().contains(".")) return false;
             }

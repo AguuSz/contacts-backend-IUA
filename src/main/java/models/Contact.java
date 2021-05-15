@@ -7,45 +7,45 @@ import java.util.UUID;
 
 public class Contact {
     private String id;
-    private String prefijo;
-    private String nombre;
-    private String apellidos;
-    private String sufijo;
-    private String apodo;
-    private String archivarComo;
-    private String empresa;
-    private String puestoDeTrabajo;
-    private String departamento;
-    private Country pais;
-    private String lineaDeDireccion2;
-    private String codigoPostal;
-    private String ciudad;
-    private String provincia;
-    private String fechaDeNacimiento;
+    private String preffix;
+    private String name;
+    private String surname;
+    private String suffix;
+    private String nickname;
+    private String saveAs;
+    private String company;
+    private String jobPosition;
+    private String department;
+    private Country country;
+    private String secondAdress;
+    private String zipCode;
+    private String city;
+    private String province;
+    private String birthDate;
 
     // Atributos lista
     private List<Tag> tags = new ArrayList<Tag>();
-    private List<Email> correos = new ArrayList<Email>();
+    private List<Email> emails = new ArrayList<Email>();
     private List<Phone> phones = new ArrayList<Phone>();
 
 
     public Contact() {
         this.id                                     = UUID.randomUUID().toString();
-        this.prefijo                                = null;
-        this.nombre                                 = null;
-        this.apellidos                              = null;
-        this.sufijo                                 = null;
-        this.apodo                                  = null;
-        this.archivarComo                           = null;
-        this.empresa                                = null;
-        this.puestoDeTrabajo                        = null;
-        this.departamento                           = null;
-        this.pais                                   = null;
-        this.codigoPostal                           = null;
-        this.lineaDeDireccion2                      = null;
-        this.ciudad                                 = null;
-        this.provincia                              = null;
-        this.fechaDeNacimiento                      = null;
+        this.preffix                                = null;
+        this.name                                   = null;
+        this.surname                                = null;
+        this.suffix                                 = null;
+        this.nickname                               = null;
+        this.saveAs                                 = null;
+        this.company                                = null;
+        this.jobPosition                            = null;
+        this.department                             = null;
+        this.country                                = null;
+        this.zipCode                                = null;
+        this.secondAdress                           = null;
+        this.city                                   = null;
+        this.province                               = null;
+        this.birthDate                              = null;
     }
 
     // -------------------------------------------- Getters y setters --------------------------------------------
@@ -58,133 +58,133 @@ public class Contact {
         this.id = id;
     }
 
-    public String getPrefijo() {
-        return prefijo;
+    public String getPreffix() {
+        return preffix;
     }
 
-    public void setPrefijo(String prefijo) {
-        this.prefijo = prefijo;
+    public void setPreffix(String preffix) {
+        this.preffix = preffix;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public String getSufijo() {
-        return sufijo;
+    public String getSuffix() {
+        return suffix;
     }
 
-    public void setSufijo(String sufijo) {
-        this.sufijo = sufijo;
+    public void setSuffix(String suffix) {
+        this.suffix = suffix;
     }
 
-    public String getApodo() {
-        return apodo;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setApodo(String apodo) {
-        this.apodo = apodo;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public String getArchivarComo() {
-        return archivarComo;
+    public String getSaveAs() {
+        return saveAs;
     }
 
-    public void setArchivarComo(String archivarComo) {
-        this.archivarComo = archivarComo;
+    public void setSaveAs(String saveAs) {
+        this.saveAs = saveAs;
     }
 
-    public String getEmpresa() {
-        return empresa;
+    public String getCompany() {
+        return company;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
-    public String getPuestoDeTrabajo() {
-        return puestoDeTrabajo;
+    public String getJobPosition() {
+        return jobPosition;
     }
 
-    public void setPuestoDeTrabajo(String puestoDeTrabajo) {
-        this.puestoDeTrabajo = puestoDeTrabajo;
+    public void setJobPosition(String jobPosition) {
+        this.jobPosition = jobPosition;
     }
 
-    public String getDepartamento() {
-        return departamento;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
-    public Country getPais() {
-        return pais;
+    public Country getCountry() {
+        return country;
     }
 
-    public void setPais(Country pais) {
-        this.pais = pais;
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
-    public String getLineaDeDireccion2() {
-        return lineaDeDireccion2;
+    public String getSecondAdress() {
+        return secondAdress;
     }
 
-    public void setLineaDeDireccion2(String lineaDeDireccion2) {
-        this.lineaDeDireccion2 = lineaDeDireccion2;
+    public void setSecondAdress(String secondAdress) {
+        this.secondAdress = secondAdress;
     }
 
-    public String getCodigoPostal() {
-        return codigoPostal;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setCodigoPostal(String codigoPostal) {
-        this.codigoPostal = codigoPostal;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public String getCity() {
+        return city;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getProvincia() {
-        return provincia;
+    public String getProvince() {
+        return province;
     }
 
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+    public void setProvince(String province) {
+        this.province = province;
     }
 
-    public String getFechaDeNacimiento() {
-        return fechaDeNacimiento;
+    public String getBirthDate() {
+        return birthDate;
     }
 
-    public void setFechaDeNacimiento(String fechaDeNacimiento) {
-        this.fechaDeNacimiento = fechaDeNacimiento;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
     }
 
     // -------------------------------------------- Comienzo atributos lista --------------------------------------------
-    public List<Email> getCorreos() {
-        return correos;
+    public List<Email> getEmails() {
+        return emails;
     }
 
     public Email getCorreoByAddress(String address) {
-        for(Email email : this.correos) {
+        for(Email email : this.emails) {
             if (email.getMail().equals(address)) {
                 // Este correo hay que devolver
                 return email;
@@ -193,12 +193,12 @@ public class Contact {
         return null;
     }
 
-    public void setCorreos(List<Email> correos) {
-        this.correos = correos;
+    public void setEmails(List<Email> emails) {
+        this.emails = emails;
     }
 
     public void addCorreo(Email email) {
-        this.correos.add(email);
+        this.emails.add(email);
     }
 
     public List<Phone> getPhones() {
@@ -249,11 +249,11 @@ public class Contact {
     // -------------------------------------------- Utilidades contacto --------------------------------------------
     public String getBriefContact() {
         return  "\tid: " + id + "\n" +
-                "\tnombre: " + nombre + "\n" +
-                "\tapellidos: " + apellidos + "\n" +
-                "\tpais: " + pais.briefToString() + "\n" +
+                "\tname: " + name + "\n" +
+                "\tsurname: " + surname + "\n" +
+                "\tcountry: " + country.briefToString() + "\n" +
                 "\ttelefonos registrados: " + phones.size() + "\n" +
-                "\tcorreos registrados: " + correos.size() + "\n" +
+                "\temails registrados: " + emails.size() + "\n" +
                 "\ttags registrados: " + tags + "\n";
     }
 
@@ -262,33 +262,33 @@ public class Contact {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Contact contact = (Contact) o;
-        return Objects.equals(id, contact.id) && Objects.equals(prefijo, contact.prefijo) && Objects.equals(nombre, contact.nombre) && Objects.equals(apellidos, contact.apellidos) && Objects.equals(sufijo, contact.sufijo) && Objects.equals(apodo, contact.apodo) && Objects.equals(archivarComo, contact.archivarComo) && Objects.equals(empresa, contact.empresa) && Objects.equals(puestoDeTrabajo, contact.puestoDeTrabajo) && Objects.equals(departamento, contact.departamento) && Objects.equals(pais, contact.pais) && Objects.equals(lineaDeDireccion2, contact.lineaDeDireccion2) && Objects.equals(codigoPostal, contact.codigoPostal) && Objects.equals(ciudad, contact.ciudad) && Objects.equals(provincia, contact.provincia) && Objects.equals(fechaDeNacimiento, contact.fechaDeNacimiento) && Objects.equals(tags, contact.tags) && Objects.equals(correos, contact.correos) && Objects.equals(phones, contact.phones);
+        return Objects.equals(id, contact.id) && Objects.equals(preffix, contact.preffix) && Objects.equals(name, contact.name) && Objects.equals(surname, contact.surname) && Objects.equals(suffix, contact.suffix) && Objects.equals(nickname, contact.nickname) && Objects.equals(saveAs, contact.saveAs) && Objects.equals(company, contact.company) && Objects.equals(jobPosition, contact.jobPosition) && Objects.equals(department, contact.department) && Objects.equals(country, contact.country) && Objects.equals(secondAdress, contact.secondAdress) && Objects.equals(zipCode, contact.zipCode) && Objects.equals(city, contact.city) && Objects.equals(province, contact.province) && Objects.equals(birthDate, contact.birthDate) && Objects.equals(tags, contact.tags) && Objects.equals(emails, contact.emails) && Objects.equals(phones, contact.phones);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, prefijo, nombre, apellidos, sufijo, apodo, archivarComo, empresa, puestoDeTrabajo, departamento, pais, lineaDeDireccion2, codigoPostal, ciudad, provincia, fechaDeNacimiento, tags, correos, phones);
+        return Objects.hash(id, preffix, name, surname, suffix, nickname, saveAs, company, jobPosition, department, country, secondAdress, zipCode, city, province, birthDate, tags, emails, phones);
     }
 
     @Override
     public String toString() {
         return  "\tid: " + id + "\n" +
-                "\tprefijo: " + prefijo + "\n" +
-                "\tnombre: " + nombre + "\n" +
-                "\tapellidos: " + apellidos + "\n" +
-                "\tsufijo: " + sufijo + "\n" +
-                "\tapodo: " + apodo + "\n" +
-                "\tarchivarComo: " + archivarComo + "\n" +
-                "\tempresa: " + empresa + "\n" +
-                "\tpuestoDeTrabajo: " + puestoDeTrabajo + "\n" +
-                "\tdepartamento: " + departamento + "\n" +
-                "\tpais: " + pais + "\n" +
-                "\tciudad: " + ciudad + "\n" +
-                "\tprovincia: " + provincia + "\n" +
-                "\tlineaDeDireccion2: " + lineaDeDireccion2 + "\n" +
-                "\tcodigoPostal: " + codigoPostal + "\n" +
+                "\tpreffix: " + preffix + "\n" +
+                "\tname: " + name + "\n" +
+                "\tsurname: " + surname + "\n" +
+                "\tsuffix: " + suffix + "\n" +
+                "\tnickname: " + nickname + "\n" +
+                "\tsaveAs: " + saveAs + "\n" +
+                "\tcompany: " + company + "\n" +
+                "\tjobPosition: " + jobPosition + "\n" +
+                "\tdepartment: " + department + "\n" +
+                "\tcountry: " + country + "\n" +
+                "\tcity: " + city + "\n" +
+                "\tprovince: " + province + "\n" +
+                "\tsecondAdress: " + secondAdress + "\n" +
+                "\tzipCode: " + zipCode + "\n" +
                 "\ttelefonos: " + phones + "\n" +
-                "\tcorreos: " + correos + "\n";
+                "\temails: " + emails + "\n";
 
     }
 }
