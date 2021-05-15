@@ -1,5 +1,6 @@
 package main.java.services;
 
+import main.java.interfaces.IContactService;
 import main.java.models.Contact;
 
 import com.google.gson.Gson;
@@ -358,7 +359,7 @@ public class ContactService implements IContactService {
     }
 
     // Valida si un url dada cumple los requisitos
-    private static boolean validateUrl(String url) {
+    public boolean validateUrl(String url) {
         try {
             new URI(url).parseServerAuthority();
             return true;
