@@ -1,11 +1,4 @@
-<<<<<<< HEAD:src/utilities/IContactService.java
-package utilities;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-=======
 package main.java.interfaces;
->>>>>>> 7c7203aa2b8de70c7cbc433527f407b71d9dec17:src/main/java/interfaces/IContactService.java
 
 import main.java.models.Contact;
 import main.java.models.Email;
@@ -15,11 +8,7 @@ import java.net.URISyntaxException;
 
 public interface IContactService {
 
-<<<<<<< HEAD:src/utilities/IContactService.java
-	// -------------------------------------------- Seccion create --------------------------------------------
-=======
     // -------------------------------------------- Seccion create --------------------------------------------
->>>>>>> 7c7203aa2b8de70c7cbc433527f407b71d9dec17:src/main/java/interfaces/IContactService.java
 
     // Guarda los contactos dados en un JSON
     public void saveContacts(Contact[] contacts);
@@ -71,11 +60,11 @@ public interface IContactService {
     // Realiza una validacion de campos basica
     public static boolean validateFields(Contact contact) {
         try {
-            if (contact.getName().trim().length()            == 0) return false;
-            if (contact.getSurname().trim().length()         == 0) return false;
-            if (contact.getNickname().trim().length()             == 0) return false;
-            if (contact.getCity().trim().length()            == 0) return false;
-            if (contact.getProvince().trim().length()         == 0) return false;
+            if (contact.getNombre().trim().length()            == 0) return false;
+            if (contact.getApellidos().trim().length()         == 0) return false;
+            if (contact.getApodo().trim().length()             == 0) return false;
+            if (contact.getCiudad().trim().length()            == 0) return false;
+            if (contact.getProvincia().trim().length()         == 0) return false;
 
             for (Email email : contact.getCorreos()) {
                 if (email.getMail().trim().length() == 0) return false;
@@ -91,20 +80,6 @@ public interface IContactService {
     }
 
     // Valida si un url dada cumple los requisitos
-<<<<<<< HEAD:src/utilities/IContactService.java
-    public static boolean validateUrl(String url) {
-        try {
-            new URI(url).parseServerAuthority();
-            return true;
-        } catch (URISyntaxException e) {
-            // No es una url valida
-            return false;
-        }
-    }
-    
-}
-=======
     public boolean validateUrl(String url);
 
 }
->>>>>>> 7c7203aa2b8de70c7cbc433527f407b71d9dec17:src/main/java/interfaces/IContactService.java

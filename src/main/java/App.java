@@ -4,6 +4,7 @@ import main.java.models.*;
 import main.java.services.ContactService;
 import main.java.utils.MyUtils;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class App {
@@ -96,80 +97,80 @@ public class App {
         System.out.print("Nombre (requerido): ");
         String tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getName())) originalContact.setName(tempField);
+            if (!tempField.equals(originalContact.getNombre())) originalContact.setNombre(tempField);
         }
 
         System.out.print("Apellido (requerido): ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getSurname())) originalContact.setSurname(tempField);
+            if (!tempField.equals(originalContact.getApellidos())) originalContact.setApellidos(tempField);
         }
 
         System.out.print("Apodo (requerido): ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getNickname())) originalContact.setNickname(tempField);
+            if (!tempField.equals(originalContact.getApodo())) originalContact.setApodo(tempField);
         }
 
         System.out.print("Pais (requerido): ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
             Country country = new Country(tempField);
-            originalContact.setCountry(country);
+            originalContact.setPais(country);
         }
 
         System.out.print("Provincia (requerido): ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getProvince())) originalContact.setProvince(MyUtils.processInput());
+            if (!tempField.equals(originalContact.getProvincia())) originalContact.setProvincia(MyUtils.processInput());
         }
 
         System.out.print("Ciudad (requerido): ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getCity())) originalContact.setCity(MyUtils.processInput());
+            if (!tempField.equals(originalContact.getCiudad())) originalContact.setCiudad(MyUtils.processInput());
         }
 
         System.out.print("Codigo postal: ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getPostalCode())) originalContact.setPostalCode(MyUtils.processInput());
+            if (!tempField.equals(originalContact.getCodigoPostal())) originalContact.setCodigoPostal(MyUtils.processInput());
         }
 
         System.out.print("Prefijo: ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getPrefix())) originalContact.setPrefix(tempField);
+            if (!tempField.equals(originalContact.getPrefijo())) originalContact.setPrefijo(tempField);
         }
 
         System.out.print("Sufijo: ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getSufix())) originalContact.setSufix(tempField);
+            if (!tempField.equals(originalContact.getSufijo())) originalContact.setSufijo(tempField);
         }
 
         System.out.print("Empresa: ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getBusiness())) originalContact.setBusiness(tempField);
+            if (!tempField.equals(originalContact.getEmpresa())) originalContact.setEmpresa(tempField);
         }
 
         System.out.print("Puesto de trabajo: ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getJob())) originalContact.setJob(tempField);
+            if (!tempField.equals(originalContact.getPuestoDeTrabajo())) originalContact.setPuestoDeTrabajo(tempField);
         }
 
         System.out.print("Departamento: ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getDepartment())) originalContact.setDepartment(tempField);
+            if (!tempField.equals(originalContact.getDepartamento())) originalContact.setDepartamento(tempField);
         }
 
         System.out.print("Fecha de nacimiento: ");
         tempField = MyUtils.processInput();
         if (tempField != null) {
-            if (!tempField.equals(originalContact.getDateOfBirth())) originalContact.setDateOfBirth(tempField);
+            if (!tempField.equals(originalContact.getFechaDeNacimiento())) originalContact.setFechaDeNacimiento(tempField);
         }
 
         if (ContactService.validateFields(originalContact)) return originalContact;
