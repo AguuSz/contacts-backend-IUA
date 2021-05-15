@@ -4,21 +4,20 @@ import main.java.models.Contact;
 import main.java.models.Email;
 
 public interface IContactService {
-
     // -------------------------------------------- Seccion create --------------------------------------------
 
     // Guarda los contactos dados en un JSON
     public void saveContacts(Contact[] contacts);
 
-    // Agrega un array de contactos
+    // Agrega un array de contactos al archivo JSON
     public void addContacts(Contact[] contacts);
 
-    // Agrega un solo contacto
+    // Agrega un solo contacto al archivo JSON
     public void addContact(Contact contact);
 
     // -------------------------------------------- Seccion Read --------------------------------------------
 
-    // Devuelve la lista de Contactos guardados en una JSON String
+    // Devuelve la lista de Contactos guardados en un archivo JSON
     public Contact[] getContacts();
 
     // Busca en la DB un ID y devuelve el contacto, y sino null
@@ -55,28 +54,9 @@ public interface IContactService {
     public void printSingleContact(String id);
 
     // Realiza una validacion de campos basica
-    public static boolean validateFields(Contact contact) {
-        try {
-            if (contact.getName().trim().length()            == 0) return false;
-            if (contact.getSurname().trim().length()         == 0) return false;
-            if (contact.getNickname().trim().length()             == 0) return false;
-            if (contact.getCity().trim().length()            == 0) return false;
-            if (contact.getProvince().trim().length()         == 0) return false;
-
-            for (Email email : contact.getEmails()) {
-                if (email.getMail().trim().length() == 0) return false;
-                if (!email.getMail().contains("@") || !email.getMail().contains(".")) return false;
-            }
-
-            // En caso de que verifique los campos...
-            return true;
-        } catch (Exception e) {
-            System.out.println("Alguno de los parametros no ha pasado la validacion. Intente de nuevo!");
-            return false;
-        }
-    }
+    public boolean areValidFields(Contact contact);
 
     // Valida si un url dada cumple los requisitos
-    public boolean validateUrl(String url);
+    public boolean isAValidUrl(String url);
 
 }

@@ -17,6 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContactService implements IContactService {
+    private String filename;
+
+    public ContactService(String filename) {
+        this.filename = filename;
+    }
 
     // -------------------------------------------- Seccion create --------------------------------------------
 
@@ -24,14 +29,14 @@ public class ContactService implements IContactService {
     public void saveContacts(Contact[] contacts) {
 
         for (int i = 0; i < contacts.length; i++) {
-            if (!validateFields(contacts[i])) {
+            if (!areValidFields(contacts[i])) {
                 // Si no valida alguno, que tire error
                 System.out.println("Algunos datos no pasaron la validacion. Reviselos e intente de nuevo");
                 return;
             }
         }
 
-        try (FileWriter writer = new FileWriter("datosContacto.json")) {
+        try (FileWriter writer = new FileWriter(filename)) {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             gson.toJson(contacts, writer);
             System.out.println("Se han guardado correctamente!");
@@ -81,8 +86,7 @@ public class ContactService implements IContactService {
 
     // Devuelve la lista de Contactos guardados en una JSON String
     public Contact[] getContacts() {
-        Gson gson = new Gson();
-        return gson.fromJson(getJsonContentFromFile(), Contact[].class);
+        return new Gson().fromJson(getJsonContentFromFile(filename), Contact[].class);
     }
 
     // Busca en la DB un ID y devuelve el contacto, y sino null
@@ -314,9 +318,9 @@ public class ContactService implements IContactService {
     }
 
     // Devuelve el contenido del archivo json en una string para luego ser leida por el Gson
-    private String getJsonContentFromFile() {
+    private String getJsonContentFromFile(String filename) {
         try {
-            FileReader reader = new FileReader("datosContacto.json");
+            FileReader reader = new FileReader(filename);
             int character;
             StringBuilder jsonFile = new StringBuilder();
 
@@ -336,7 +340,7 @@ public class ContactService implements IContactService {
     }
 
     // Realiza una validacion de campos basica
-    public static boolean validateFields(Contact contact) {
+    public boolean areValidFields(Contact contact) {
         try {
             if (contact.getName().trim().length()            == 0) return false;
             if (contact.getSurname().trim().length()         == 0) return false;
@@ -358,7 +362,7 @@ public class ContactService implements IContactService {
     }
 
     // Valida si un url dada cumple los requisitos
-    public boolean validateUrl(String url) {
+    public boolean isAValidUrl(String url) {
         try {
             new URI(url).parseServerAuthority();
             return true;
