@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContactService implements IContactService {
+class ContactService implements IContactService {
     private String filename;
 
     public ContactService(String filename) {
@@ -28,8 +28,8 @@ public class ContactService implements IContactService {
     // Guarda los contactos dados en un JSON
     public void saveContacts(Contact[] contacts) {
 
-        for (int i = 0; i < contacts.length; i++) {
-            if (!areValidFields(contacts[i])) {
+        for (Contact contact : contacts) {
+            if (!areValidFields(contact)) {
                 // Si no valida alguno, que tire error
                 System.out.println("Algunos datos no pasaron la validacion. Reviselos e intente de nuevo");
                 return;
@@ -94,9 +94,9 @@ public class ContactService implements IContactService {
         Contact[] contacts = getContacts();
 
         try {
-            for (int i = 0; i < contacts.length; i++) {
-                if (contacts[i].getId().equals(id)) {
-                    return contacts[i];
+            for (Contact contact : contacts) {
+                if (contact.getId().equals(id)) {
+                    return contact;
                 }
             }
 
@@ -113,10 +113,10 @@ public class ContactService implements IContactService {
         List<Contact> contactsWithThatNameList = new ArrayList<Contact>();
 
         try {
-            for (int i = 0; i < contacts.length; i++) {
-                if (contacts[i].getName().toLowerCase().contains(name.toLowerCase())) {
+            for (Contact contact : contacts) {
+                if (contact.getName().toLowerCase().contains(name.toLowerCase())) {
                     // Significa que este contacto tiene parte del nombre ingresado
-                    contactsWithThatNameList.add(contacts[i]);
+                    contactsWithThatNameList.add(contact);
                 }
             }
 
@@ -133,10 +133,10 @@ public class ContactService implements IContactService {
         List<Contact> contactsWithThatEmail = new ArrayList<Contact>();
 
         try {
-            for (int i = 0; i < contacts.length; i++) {
-                for (int j = 0; j < contacts[i].getEmails().size(); j++) {
-                    if (contacts[i].getEmails().get(j).getMail().toLowerCase().contains(email.toLowerCase())) {
-                        contactsWithThatEmail.add(contacts[i]);
+            for (Contact contact : contacts) {
+                for (int j = 0; j < contact.getEmails().size(); j++) {
+                    if (contact.getEmails().get(j).getMail().toLowerCase().contains(email.toLowerCase())) {
+                        contactsWithThatEmail.add(contact);
                     }
                 }
             }
@@ -154,10 +154,10 @@ public class ContactService implements IContactService {
         List<Contact> contactsWithThatTagList = new ArrayList<Contact>();
 
         try {
-            for (int i = 0; i < contacts.length; i++) {
-                for (int j = 0; j < contacts[i].getTags().size(); j++) {
-                    if (contacts[i].getTags().get(j).getName().toLowerCase().contains(tag.toLowerCase().trim())) {
-                        contactsWithThatTagList.add(contacts[i]);
+            for (Contact contact : contacts) {
+                for (int j = 0; j < contact.getTags().size(); j++) {
+                    if (contact.getTags().get(j).getName().toLowerCase().contains(tag.toLowerCase().trim())) {
+                        contactsWithThatTagList.add(contact);
                     }
                 }
             }
@@ -205,10 +205,10 @@ public class ContactService implements IContactService {
         boolean found = false;
 
         try {
-            for (int i = 0; i < contacts.length; i++) {
+            for (Contact contact : contacts) {
                 // Vamos a crear un nuevo array con todos los contactos exceptuando el del id pasado por parametro.
-                if (!contacts[i].getId().equals(id)) {
-                    newContactList.add(contacts[i]);
+                if (!contact.getId().equals(id)) {
+                    newContactList.add(contact);
                 } else {
                     System.out.println("Se ha encontrado el contacto. Eliminando....");
                     found = true;
@@ -304,8 +304,8 @@ public class ContactService implements IContactService {
     private boolean isUserInDB(String id) {
         Contact[] contacts = getContacts();
         try {
-            for (int i = 0; i < contacts.length; i++) {
-                if (contacts[i].getId().equals(id)) {
+            for (Contact contact : contacts) {
+                if (contact.getId().equals(id)) {
                     return true;
                 }
             }
