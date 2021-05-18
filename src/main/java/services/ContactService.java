@@ -169,6 +169,129 @@ class ContactService implements IContactService {
         }
     }
 
+    // Busca en la DB un apellido y devuelve el contacto, y sino null
+    public Contact[] findContactsBySurname(String surname) {
+        Contact[] contacts = getContacts();
+        List<Contact> contactsWithThatSurnameList = new ArrayList<Contact>();
+
+        try {
+            for (Contact contact : contacts) {
+                if (contact.getSurname().toLowerCase().contains(surname.toLowerCase())) {
+                    // Significa que este contacto tiene parte del apellido ingresado
+                    contactsWithThatSurnameList.add(contact);
+                }
+            }
+
+            return convertContactListToArray(contactsWithThatSurnameList);
+        } catch (NullPointerException e) {
+            MyUtils.printNoUsersInDB();
+            return null;
+        }
+    }
+
+    // Busca en la DB un apodo y devuelve el contacto, y sino null
+    public Contact[] findContactsByNickname(String nickname) {
+        Contact[] contacts = getContacts();
+        List<Contact> contactsWithThatNicknameList = new ArrayList<Contact>();
+
+        try {
+            for (Contact contact : contacts) {
+                if (contact.getPrefix().toLowerCase().contains(nickname.toLowerCase())) {
+                    // Significa que este contacto tiene parte del apodo ingresado
+                    contactsWithThatNicknameList.add(contact);
+                }
+            }
+
+            return convertContactListToArray(contactsWithThatNicknameList);
+        } catch (NullPointerException e) {
+            MyUtils.printNoUsersInDB();
+            return null;
+        }
+    }
+
+    // Busca en la DB un departamento y devuelve el contacto, y sino null
+    public Contact[] findContactsByDepartment(String nickname) {
+        Contact[] contacts = getContacts();
+        List<Contact> contactsWithThatDepartmentList = new ArrayList<Contact>();
+
+        try {
+            for (Contact contact : contacts) {
+                if (contact.getDepartment().toLowerCase().contains(nickname.toLowerCase())) {
+                    // Significa que este contacto pertenece al departamento ingresado
+                    contactsWithThatDepartmentList.add(contact);
+                }
+            }
+
+            return convertContactListToArray(contactsWithThatDepartmentList);
+        } catch (NullPointerException e) {
+            MyUtils.printNoUsersInDB();
+            return null;
+        }
+    }
+
+    // Busca en la DB un pais y devuelve el contacto, y sino null
+    public Contact[] findContactsByCountry(String country) {
+        Contact[] contacts = getContacts();
+        List<Contact> contactsWithThatCountryList = new ArrayList<Contact>();
+
+        try {
+            for (Contact contact : contacts) {
+                if (contact.getCountry().toString().toLowerCase().contains(country.toLowerCase())) {
+                    // Significa que este contacto forma parte del pais ingresado
+                    contactsWithThatCountryList.add(contact);
+                }
+            }
+
+            return convertContactListToArray(contactsWithThatCountryList);
+        } catch (NullPointerException e) {
+            MyUtils.printNoUsersInDB();
+            return null;
+        }
+    }
+
+    // Busca en la DB una ciudad y devuelve el contacto, y sino null
+    public Contact[] findContactsByCity(String city) {
+        Contact[] contacts = getContacts();
+        List<Contact> contactsWithThatCityList = new ArrayList<Contact>();
+
+        try {
+            for (Contact contact : contacts) {
+                if (contact.getCity().toLowerCase().contains(city.toLowerCase())) {
+                    // Significa que este contacto pertenece a la ciudad ingresada
+                    contactsWithThatCityList.add(contact);
+                }
+            }
+
+            return convertContactListToArray(contactsWithThatCityList);
+        } catch (NullPointerException e) {
+            MyUtils.printNoUsersInDB();
+            return null;
+        }
+    }
+
+    // Busca en la DB una provincia y devuelve el contacto, y sino null
+    public Contact[] findContactsByProvince(String province) {
+        Contact[] contacts = getContacts();
+        List<Contact> contactsWithThatProvinceList = new ArrayList<Contact>();
+
+        try {
+            for (Contact contact : contacts) {
+                if (contact.getProvince().toLowerCase().contains(province.toLowerCase())) {
+                    // Significa que este contacto pertenece a la provincia ingresada
+                    contactsWithThatProvinceList.add(contact);
+                }
+            }
+
+            return convertContactListToArray(contactsWithThatProvinceList);
+        } catch (NullPointerException e) {
+            MyUtils.printNoUsersInDB();
+            return null;
+        }
+    }
+
+
+
+
     // -------------------------------------------- Seccion update --------------------------------------------
 
     // Actualiza un contacto en base a un id dado.

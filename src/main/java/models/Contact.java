@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class Contact {
     private String id;
-    private String preffix;
+    private String prefix;
     private String name;
     private String surname;
     private String suffix;
@@ -31,7 +31,7 @@ public class Contact {
 
     public Contact() {
         this.id                                     = UUID.randomUUID().toString();
-        this.preffix                                = null;
+        this.prefix = null;
         this.name                                   = null;
         this.surname                                = null;
         this.suffix                                 = null;
@@ -58,12 +58,12 @@ public class Contact {
         this.id = id;
     }
 
-    public String getPreffix() {
-        return preffix;
+    public String getPrefix() {
+        return prefix;
     }
 
-    public void setPreffix(String preffix) {
-        this.preffix = preffix;
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
     }
 
     public String getName() {
@@ -262,18 +262,18 @@ public class Contact {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Contact contact = (Contact) o;
-        return Objects.equals(id, contact.id) && Objects.equals(preffix, contact.preffix) && Objects.equals(name, contact.name) && Objects.equals(surname, contact.surname) && Objects.equals(suffix, contact.suffix) && Objects.equals(nickname, contact.nickname) && Objects.equals(saveAs, contact.saveAs) && Objects.equals(company, contact.company) && Objects.equals(jobPosition, contact.jobPosition) && Objects.equals(department, contact.department) && Objects.equals(country, contact.country) && Objects.equals(secondAdress, contact.secondAdress) && Objects.equals(zipCode, contact.zipCode) && Objects.equals(city, contact.city) && Objects.equals(province, contact.province) && Objects.equals(birthDate, contact.birthDate) && Objects.equals(tags, contact.tags) && Objects.equals(emails, contact.emails) && Objects.equals(phones, contact.phones);
+        return Objects.equals(id, contact.id) && Objects.equals(prefix, contact.prefix) && Objects.equals(name, contact.name) && Objects.equals(surname, contact.surname) && Objects.equals(suffix, contact.suffix) && Objects.equals(nickname, contact.nickname) && Objects.equals(saveAs, contact.saveAs) && Objects.equals(company, contact.company) && Objects.equals(jobPosition, contact.jobPosition) && Objects.equals(department, contact.department) && Objects.equals(country, contact.country) && Objects.equals(secondAdress, contact.secondAdress) && Objects.equals(zipCode, contact.zipCode) && Objects.equals(city, contact.city) && Objects.equals(province, contact.province) && Objects.equals(birthDate, contact.birthDate) && Objects.equals(tags, contact.tags) && Objects.equals(emails, contact.emails) && Objects.equals(phones, contact.phones);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, preffix, name, surname, suffix, nickname, saveAs, company, jobPosition, department, country, secondAdress, zipCode, city, province, birthDate, tags, emails, phones);
+        return Objects.hash(id, prefix, name, surname, suffix, nickname, saveAs, company, jobPosition, department, country, secondAdress, zipCode, city, province, birthDate, tags, emails, phones);
     }
 
     @Override
     public String toString() {
         return  "\tid: " + id + "\n" +
-                "\tpreffix: " + preffix + "\n" +
+                "\tpreffix: " + prefix + "\n" +
                 "\tname: " + name + "\n" +
                 "\tsurname: " + surname + "\n" +
                 "\tsuffix: " + suffix + "\n" +

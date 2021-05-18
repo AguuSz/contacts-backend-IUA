@@ -32,6 +32,25 @@ public interface IContactService {
     // Busca en la DB un tag y devuelve la lista de contactos que contengan dichos tags.
     public Contact[] findContactsByTag(String tag);
 
+    // Busca en la DB un apellido y devuelve la lista de contactos que contengan dichos caracteres.
+    public Contact[] findContactsBySurname(String surname);
+
+    // Busca en la DB un apodo y devuelve la lista de contactos que contengan dichos caracteres.
+    public Contact[] findContactsByNickname(String nickname);
+
+    // Busca en la DB un departamento y devuelve la lista de contactos que contengan dichos caracteres.
+    public Contact[] findContactsByDepartment(String department);
+
+    // Busca en la DB un pais y devuelve la lista de contactos que contengan dichos caracteres.
+    public Contact[] findContactsByCountry(String country);
+
+    // Busca en la DB una ciudad y devuelve la lista de contactos que contengan dichos caracteres.
+    public Contact[] findContactsByCity(String city);
+
+    // Busca en la DB una provincia y devuelve la lista de contactos que contengan dichos caracteres.
+    public Contact[] findContactsByProvince(String province);
+
+
     // -------------------------------------------- Seccion update --------------------------------------------
 
     // Actualiza un contacto en base a un id dado.
