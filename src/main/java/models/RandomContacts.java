@@ -254,7 +254,7 @@ public class RandomContacts extends Contact {
             Contact contact = new Contact();
             Random random = new Random();
 
-            contact.setPreffix(this.prefijos[random.nextInt(this.prefijos.length)]);
+            contact.setPrefix(this.prefijos[random.nextInt(this.prefijos.length)]);
             contact.setName(this.nombres[random.nextInt(this.nombres.length)]);
             contact.setSurname(this.apellidos[random.nextInt(this.apellidos.length)]);
             contact.setSuffix(this.sufijos[random.nextInt(this.sufijos.length)]);
