@@ -6,6 +6,5 @@ public class ContactFactory {
     public static IContactService buildContactService(String filename){
         return new ContactService(filename);
     }
-
 }
 
